@@ -12,7 +12,7 @@ cdef cnp.ndarray[cnp.float64_t, ndim=1] vec_to_numpyd(vector[double] input):
   return data
 
 cdef cnp.ndarray[cnp.int_t, ndim=1] vec_to_numpyi(vector[int] input):
-  cdef cnp.ndarray[cnp.int_t, ndim=1] data = np.zeros(input.size(), dtype=np.int)
+  cdef cnp.ndarray[cnp.int_t, ndim=1] data = np.zeros(input.size(), dtype=int)
   for i in xrange(input.size()):
     data[i] = input[i]
   return data
